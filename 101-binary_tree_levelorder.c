@@ -1,6 +1,11 @@
 #include "binary_trees.h"
 #include <stdlib.h>
 
+queue *funcQueueNode(binary_tree_t *qnode);
+void qfree(queue *h);
+void qPush(binary_tree_t *n, queue *h, queue **tl, void (*func)(int));
+void qPop(queue **h);
+
 /**
  * funcQueueNode - creates a new queue node
  * @qnode: queue node
