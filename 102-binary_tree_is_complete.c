@@ -23,7 +23,7 @@ size_t binary_tree_size(const binary_tree_t *tree)
   * @tree: BTree root node ptr
   * @i: index of node
   * @s: node count
-  * Retur: 1 or 0
+  * Return: 1 or 0
   */
 int handlerFunc(const binary_tree_t *tree, size_t i, size_t s)
 {
