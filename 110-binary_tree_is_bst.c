@@ -11,7 +11,7 @@
 int handler(const binary_tree_t *tree, int minV, int maxV)
 {
 	if (!tree)
-		return (0);
+		return (1);
 	if (tree->n < minV && tree->n > maxV &&
 			 handler(tree->left, minV, tree->n) &&
 			  handler(tree->right, tree->n, maxV))
@@ -27,5 +27,7 @@ int handler(const binary_tree_t *tree, int minV, int maxV)
   */
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
+	if (!tree)
+		return (0);
 	return (handler(tree, INT_MIN, INT_MAX));
 }
