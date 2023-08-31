@@ -13,12 +13,10 @@ int handler(const binary_tree_t *tree, int minV, int maxV)
 {
 	if (!tree)
 		return (1);
-	if (tree->n < minV && tree->n > maxV &&
-			 handler(tree->left, minV, tree->n) &&
-			  handler(tree->right, tree->n, maxV))
-		return (1);
-	else
+	if (tree->n < minV || tree->n > maxV)
 		return (0);
+	return (handler(tree->left, minV, tree->n - 1) &&
+			 handler(tree->right, tree->n + 1, maxV));
 }
 
 /**
