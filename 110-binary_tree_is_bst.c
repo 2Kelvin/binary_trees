@@ -1,5 +1,6 @@
 #include "binary_trees.h"
 #include <stdlib.h>
+#include <limits.h>
 
 /**
   * handler - does the actual BST check
